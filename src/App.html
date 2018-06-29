@@ -1,7 +1,5 @@
 <h1>Welcome to <img id="logo-a" src="tool.svg" alt="A">rchitect!</h1>
-<div style="position:relative; height:1000px; width:1000px; background-color:rgba(211,240,255)" >
-    <Block label="Label" x=22 y=10 w=100 h=40 color="rgba(200,100,22)"></Block>
-</div>
+<DrawingBoard></DrawingBoard>
 
 
 
@@ -14,9 +12,11 @@
 </style>
 
 <script>
-  import Block from "./Block.html";
+  import DrawingBoard from "./DrawingBoard.html";
 
   export default {
-		components: { Block }
+    components:{
+      DrawingBoard    
+    }
 	};
 </script>
