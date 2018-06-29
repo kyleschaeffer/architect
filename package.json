@@ -1,21 +1,20 @@
 {
-  "name": "architect",
-  "version": "0.0.1",
-  "description": "A tool for building visual interface architecture documentation (with the icing on top being the easy generation of SP-Engineer seeds).",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
+  "name": "svelte-app",
+  "version": "1.0.0",
+  "devDependencies": {
+    "cross-env": "^5.1.5",
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "serve": "^6.5.5",
+    "style-loader": "^0.21.0",
+    "svelte": "^2.0.0",
+    "svelte-loader": "2.9.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.0.14",
+    "webpack-serve": "^1.0.2"
   },
-  "keywords": [
-    "SP",
-    "Sharepoint",
-    "Engineer",
-    "SP",
-    "Engineer",
-    "Spiritous",
-    "Interface",
-    "Architecure"
-  ],
-  "author": "David Burgess",
-  "license": "MIT"
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "dev": "webpack-serve --content public --hot"
+  }
 }
