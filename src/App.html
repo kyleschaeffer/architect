@@ -1,7 +1,22 @@
-<h1>Hello {name}!</h1>
+<h1>Welcome to <img id="logo-a" src="tool.svg" alt="A">rchitect!</h1>
+<div style="position:relative; height:1000px; width:1000px; background-color:rgba(211,240,255)" >
+    <Block label="Label" x=22 y=10 w=100 h=40 color="rgba(200,100,22)"></Block>
+</div>
+
+
 
 <style>
-	h1 {
-		color: purple;
-	}
+	#logo-a{
+    margin:-30px;
+    width:3em;
+    height:3em;
+  }
 </style>
+
+<script>
+  import Block from "./Block.html";
+
+  export default {
+		components: { Block }
+	};
+</script>
