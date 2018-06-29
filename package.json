@@ -1,0 +1,21 @@
+{
+  "name": "architect",
+  "version": "0.0.1",
+  "description": "A tool for building visual interface architecture documentation (with the icing on top being the easy generation of SP-Engineer seeds).",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "SP",
+    "Sharepoint",
+    "Engineer",
+    "SP",
+    "Engineer",
+    "Spiritous",
+    "Interface",
+    "Architecure"
+  ],
+  "author": "David Burgess",
+  "license": "MIT"
+}
