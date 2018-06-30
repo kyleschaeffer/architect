@@ -9,7 +9,7 @@ module.exports = {
     hot: true
   },
 	entry: {
-		bundle: ['./src/main.js']
+		bundle: ['./src/index.js']
 	},
 	resolve: {
 		extensions: ['.js', '.html']
