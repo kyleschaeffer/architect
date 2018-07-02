@@ -1,5 +1,6 @@
 .color-title *{
   display:inline-block;
+  
 }
 .color-title .color{
   width:20px;
@@ -16,6 +17,13 @@
 
 input,
 textarea{
-  border:none;
+  border-color:white;
   resize:none;
+  border-left-style:none;
+  border-top-style:none;
+}
+input:focus,
+textarea:focus{
+  z-index:2;
+  margin-bottom:1px;
 }

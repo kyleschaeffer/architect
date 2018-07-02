@@ -16,8 +16,8 @@ class Legend extends Component {
           legendItems.map((li,i)=>{
             return (
             <div key={li.title+i} style={{position:"relative"}}>
-              <LegendItem {...li}></LegendItem>
-              <div style={{position:"absolute",top:"2px",right:"2px",cursor:"pointer"}} onClick={()=>this.setState({ legendItems:  legendItems.filter(item=>item.title!=li.title)})}>x</div>
+              <LegendItem {...li} style={{display:"inline-block"}}></LegendItem>
+              <div style={{display:"inline-block", verticalAlign:"top",cursor:"pointer", margin:5}} onClick={()=>this.setState({ legendItems:  legendItems.filter(item=>item.title!=li.title)})}>x</div>
             </div>
             )
           })

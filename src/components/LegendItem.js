@@ -25,7 +25,7 @@ class LegendItem extends Component {
     const colorBlockStyle = color?{"backgroundColor":`rgba(${color.r},${color.g},${color.b},${color.a})`}:{};
 
     return (  
-      <div className="legend-item">
+      <div className="legend-item" {...this.props}>
         <div className="color-title">
           <div className="color" style={{...colorBlockStyle}} onClick={()=>alert("colorpicker not implemented")}></div>
           <input className="legend-title" value={title} onChange={this.handleTitleChange} ref={(node)=>this.titleInput = node}/>
