@@ -1,18 +1,25 @@
-.color-title *{
-  display:inline-block;
-  
-}
-.color-title .color{
+
+.color{
   width:20px;
   height:20px;
   margin-right:10px;
+  display:inline-block;
+}
+.legend-info {
+  display:inline-block;
+}
+.legend-info *{
+  display:block;
 }
 .legend-description{
-  margin-left:30px;
+  font-size:12px;
+  margin-bottom:5px;
 }
 .legend-title{
   font-size:14px;
   font-weight:bold;
+  min-width:100px;
+  
 }
 
 input,
@@ -22,6 +29,7 @@ textarea{
   border-left-style:none;
   border-top-style:none;
 }
+
 input:focus,
 textarea:focus{
   z-index:2;
