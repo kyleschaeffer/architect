@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
 
 class DependencyEditor extends Component {
-  state = {}
+  state = {
+    
+  }
   render() { 
     return ( 
       <div style={{backgroundColor:"#EFEFEFEF"}}>
         <h3 style={{textAlign:"center"}}>Dependencies</h3>
         <div style={{display:"flex"}}>
-          <select multiple style={{flex:1}}/>
-          <select multiple style={{flex:1}}/>
-          <select multiple style={{flex:1}}/>
+          <div style={{flex:1, margin:2}}>
+            <label htmlFor="">Lists</label>
+            <select multiple style={{width:"100%"}}>
+            </select>
+          </div>
+          <div style={{flex:1, margin:2}}>
+            <label htmlFor="">Content Types</label>
+            <select multiple style={{width:"100%"}}>
+            </select>
+          </div>
+          <div style={{flex:1, margin:2}}>
+            <label htmlFor="">Site Columns</label>
+            <select multiple style={{width:"100%"}}>
+            </select>
+          </div>
         </div>
       </div> 
     )
