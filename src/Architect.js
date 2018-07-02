@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './Architect.css';
 import logo from './tool.svg';
+
 import Legend from './components/Legend.js';
 import DrawingBoard from './components/DrawingBoard.js';
-
+import DependencyEditor from './components/DependencyEditor.js';
 
 
 class App extends Component {
@@ -18,7 +19,7 @@ class App extends Component {
           <Legend style={{flex:"1"}}></Legend>
         </div>
         <div>
-          
+          <DependencyEditor></DependencyEditor>
         </div>
       </div>
     );
