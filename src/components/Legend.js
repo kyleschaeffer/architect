@@ -10,7 +10,7 @@ class Legend extends Component {
   render() { 
     const {legendItems} = this.state;
     return (  
-      <div className = "legend" {...this.props.styles} style={{padding:20}}>
+      <div className = "legend" {...this.props.styles} style={{padding:"0px 20px"}}>
         <LegendItem title="Web Component" description="testing this" color="false" bottomBorder="true"></LegendItem>
         {
           legendItems.map((li,i)=>{

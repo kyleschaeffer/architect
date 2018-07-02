@@ -31,7 +31,7 @@ class LegendItem extends Component {
           <input className="legend-title" value={title} onChange={this.handleTitleChange} ref={(node)=>this.titleInput = node}/>
         </div>
         <textarea className="legend-description" value={description} onChange={this.handleDescriptionChange} ref={(node)=>this.descInput = node}/>
-        {bottomBorder && <div style={{"borderBottom":"solid rgba(0,0,0,.2) 1px", "marginRight":"20%", "marginLeft":"10%"}}></div>}
+        {bottomBorder && <div style={{"borderBottom":"solid rgba(0,0,0,.2) 1px", "marginRight":"20%", "marginLeft":"10%", marginBottom:10}}></div>}
       </div>
     )
   }

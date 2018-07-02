@@ -4,6 +4,9 @@ class DependencyEditor extends Component {
   state = {
     
   }
+  createSeed = ()=>{
+    
+  }
   render() { 
     return ( 
       <div style={{backgroundColor:"#EFEFEFEF"}}>
@@ -25,6 +28,7 @@ class DependencyEditor extends Component {
             </select>
           </div>
         </div>
+        <button onClick={this.createSeed}>Export</button>
       </div> 
     )
   }
