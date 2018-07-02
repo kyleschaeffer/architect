@@ -1,31 +1,18 @@
 {
   "name": "architect",
-  "version": "0.0.1",
-  "description": "A tool for building visual interface architecture documentation (with the icing on top being the easy generation of SP-Engineer seeds).",
-  "devDependencies": {
-    "cross-env": "^5.1.5",
-    "css-loader": "^0.28.11",
-    "mini-css-extract-plugin": "^0.4.0",
-    "serve": "^6.5.5",
-    "style-loader": "^0.21.0",
-    "svelte": "^2.0.0",
-    "svelte-loader": "2.9.0",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^2.0.14",
-    "webpack-dev-server": "^3.1.4"
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-color": "^2.14.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "reactcss": "^1.2.3"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
-    "dev": "webpack-dev-server --content-base './public' --hot"
-  },
-  "keywords": [
-    "SP",
-    "Sharepoint",
-    "Engineer",
-    "spiritous",
-    "Interface",
-    "Architecture"
-  ],
-  "author": "David Burgess",
-  "license": "MIT"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }

@@ -1,12 +1,6 @@
-import App from './App.html';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './Architect';
 
-const app = new App({
-	target: document.body,
-	data: {
-		
-	}
-});
-
-window.app = app;
-
-export default app;
+ReactDOM.render(<App />, document.getElementById('root'));
