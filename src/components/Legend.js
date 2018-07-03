@@ -2,46 +2,19 @@ import React, { Component } from 'react';
 import LegendItem from './LegendItem.js';
 
 class Legend extends Component {
-  state = {legendItems:[{id:Date.now(), title:"Test", description:"Testing this thing out",color:{r:200,g:20,b:20,a:.5}}]}
-
   deleteLegendItem = (toDelete)=>{
-    this.setState({ legendItems:  this.state.legendItems.filter(item=>item.id!=toDelete.id)})
-  }
-  addLegendItem = (event)=>{
-    const {legendItems} = this.state;
-
-    this.setState({ 
-      "legendItems": 
-        [...this.state.legendItems, 
-        {title:"Item"+ legendItems.length, color:{r:20,g:200,b:20,a:.5}, id:Date.now()}
-      ]
-    })
-  }
-  updateMainLegendItem = ({title,description})=>{
-    this.setState({mainTitle:title, mainDescription: description});
-  }
-  updateLegendItem = ({id, title,description})=>{
-    const {legendItems} = this.state;
-    const updatedItems = legendItems
-      .map((li)=>{
-        if(id && li.id === id){
-          return {...li, title, description, id}
-        }
-
-        return li; 
-      });
-    this.setState({"legendItems" : updatedItems });
+    this.props.del(toDelete);
   }
 
   render() { 
-    const {mainTitle, mainDescription, legendItems} = this.state;
+    const {mainTitle, mainDescription, legendItems, add, del, updateHeader, update} = this.props;
     return (  
       <div className = "legend" {...this.props.styles} style={{padding:"0px 20px"}}>
         <LegendItem 
           title={mainTitle || "Web Component Title"} 
           description={mainDescription || "Add a description"} 
           bottomborder="true"
-          update={this.updateMainLegendItem}
+          update={updateHeader}
         >
         </LegendItem>
         {
@@ -50,11 +23,10 @@ class Legend extends Component {
             <div key={li.id} style={{position:"relative"}}>
               <LegendItem 
                 {...li}
-                key={li.id}
                 style={{display:"inline-block"}}
-                update={this.updateLegendItem}
+                update={update}
               ></LegendItem>
-              {true &&
+              {del &&
                 <div 
                   style={{
                     display:"inline-block", 
@@ -68,11 +40,13 @@ class Legend extends Component {
             )
           })
         }
-        <div  
-          style={{cursor:"pointer"}}
-          onClick={this.addLegendItem}>
-          +
-        </div>
+        { add &&
+          <div  
+            style={{cursor:"pointer"}}
+            onClick={add}>
+            +
+          </div>
+        }
       </div>
     )
   }
