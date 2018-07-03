@@ -115,7 +115,7 @@ class DependencyEditor extends Component {
             <button onClick={this.addToSelect.bind(this,this.newList)}>+</button>
             <br />
             <select ref={(n)=>this.listSelect = n} multiple name="list" style={{width:"100%"}}>
-              {this.state.lists.map((list)=><option onClick={this.handleSelection.bind(this,"list",list.name)} key={list.name}>{list.name}</option>)}
+              {this.state.lists.map((list)=><option onMouseEnter={this.handleSelection.bind(this,"list",list.name)} key={list.name}>{list.name}</option>)}
             </select>
           </div>
           <div style={{flex:1, margin:2}}>
@@ -125,7 +125,7 @@ class DependencyEditor extends Component {
             <button>+</button>
             <br />
             <select ref={(n)=>this.contentTypeSelect = n} multiple name="contentType" style={{width:"100%"}}>
-              {this.state.contentTypes.map((contentType)=><option onClick={this.handleSelection.bind(this,"contentType",contentType.name)} key={contentType.name}>{contentType.name}</option>)}
+              {this.state.contentTypes.map((contentType)=><option onMouseEnter={this.handleSelection.bind(this,"contentType",contentType.name)} key={contentType.name}>{contentType.name}</option>)}
             </select>
           </div>
           <div style={{flex:1, margin:2}}>
@@ -135,7 +135,7 @@ class DependencyEditor extends Component {
             <button>+</button>
             <br />
             <select ref={(n)=>this.siteColumnSelect = n} multiple name="siteColumn" style={{width:"100%"}}>
-              {this.state.siteColumns.map((siteColumn)=><option onClick={this.handleSelection.bind(this,"siteColumn",siteColumn.name)} key={siteColumn.name}>{siteColumn.name}</option>)}
+              {this.state.siteColumns.map((siteColumn)=><option onMouseEnter={this.handleSelection.bind(this,"siteColumn",siteColumn.name)} key={siteColumn.name}>{siteColumn.name}</option>)}
             </select>
           </div>
         </div>
