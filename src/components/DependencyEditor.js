@@ -39,7 +39,15 @@ class DependencyEditor extends Component {
   }
 
   createSeed = ()=>{
+    const { lists, contentTypes, siteColumns }= this.state;
 
+    alert(JSON.stringify({
+      name:this.props.name,
+      url:'/',
+      lists,
+      contentTypes,
+      siteColumns
+    }));
   }
   handleSelection = (type, name)=>{
     const { lists, contentTypes, siteColumns }= this.getRelated({ type, name });
@@ -131,7 +139,7 @@ class DependencyEditor extends Component {
             </select>
           </div>
         </div>
-        <button onClick={this.createSeed}>Export</button>
+        <button onClick={this.createSeed}>Export 🚂 Seed</button>
       </div> 
     )
   }

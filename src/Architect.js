@@ -35,7 +35,8 @@ class Architect extends Component {
         legendItems: [
           ...legend.legendItems, 
           {
-            title:"New Item", 
+            title:"New Label", 
+            description:"Describe it here.",
             color:{
               r:Math.floor(Math.random()*255),
               g:Math.floor(Math.random()*255),
@@ -101,7 +102,7 @@ class Architect extends Component {
           </Legend>
         </div>
         <div>
-          <DependencyEditor></DependencyEditor>
+          <DependencyEditor name={this.state.legend.mainTitle}></DependencyEditor>
         </div>
       </div>
     );
